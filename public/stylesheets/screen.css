@@ -1,0 +1,438 @@
+/*
+Flexible Grid 
+adapted from : http://framelessgrid.com
+*/
+/*
+	Margin, padding, and border resets
+	except for form elements
+*/
+body, div,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, th, td,
+article, aside, figure, footer, header, hgroup, menu, nav, section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/*
+	Consistency fixes
+	adapted from http://necolas.github.com/normalize.css/
+*/
+article, aside, details, figcaption, figure,
+footer, header, hgroup, nav, section, audio, canvas, video {
+  display: block;
+}
+
+html {
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100%;
+  font-size: 100%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a img, img {
+  -ms-interpolation-mode: bicubic;
+  border: 0;
+}
+
+input, textarea, button, select {
+  margin: 0;
+  font-size: 100%;
+  line-height: normal;
+  vertical-align: baseline;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+textarea {
+  overflow: auto;
+}
+
+/*
+	These are easy to forget
+*/
+::selection {
+  background: red;
+  color: white;
+}
+
+::-moz-selection {
+  background: red;
+  color: white;
+}
+
+img::selection {
+  background: transparent;
+}
+
+img::-moz-selection {
+  background: transparent;
+}
+
+body {
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0.62);
+}
+
+.button {
+  font-size: 0.813em;
+  padding: 0.5em 1em;
+  border: 1px solid #d4d4d4;
+  margin: 0;
+  text-decoration: none;
+  text-align: center;
+  text-shadow: 1px 1px 0 #fff;
+  color: #333;
+  white-space: nowrap;
+  cursor: pointer;
+  outline: none;
+  background-color: #ececec;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f4f4f4), to(#ececec));
+  background-image: -moz-linear-gradient(#f4f4f4, #ececec);
+  background-image: -ms-linear-gradient(#f4f4f4, #ececec);
+  background-image: -o-linear-gradient(#f4f4f4, #ececec);
+  background-image: linear-gradient(#f4f4f4, #ececec);
+  -moz-background-clip: padding;
+  /* for Firefox 3.6 */
+  background-clip: padding-box;
+  border-radius: 0.2em;
+  /* IE hacks */
+  zoom: 1;
+  *display: inline;
+}
+
+.button:hover,
+.button:focus,
+.button:active,
+.button.active {
+  border-color: #3072b3;
+  border-bottom-color: #2a65a0;
+  text-decoration: none;
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
+  color: #fff;
+  background-color: #3c8dde;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#599bdc), to(#3072b3));
+  background-image: -moz-linear-gradient(#599bdc, #3072b3);
+  background-image: -o-linear-gradient(#599bdc, #3072b3);
+  background-image: linear-gradient(#599bdc, #3072b3);
+}
+
+.button:active,
+.button.active {
+  border-color: #2a65a0;
+  border-bottom-color: #3884cd;
+  background-color: #3072b3;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#3072b3), to(#599bdc));
+  background-image: -moz-linear-gradient(#3072b3, #599bdc);
+  background-image: -ms-linear-gradient(#3072b3, #599bdc);
+  background-image: -o-linear-gradient(#3072b3, #599bdc);
+  background-image: linear-gradient(#3072b3, #599bdc);
+}
+
+/* overrides extra padding on button elements in Firefox */
+.button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+.txtFld {
+  font-size: 0.813em;
+  color: #555555;
+  border: 1px solid #cccccc;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  padding: 0.5em 1em;
+}
+
+.txtFld:focus {
+  border-color: rgba(82, 168, 236, 0.8);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  outline: 0;
+  outline: thin dotted \9;
+}
+
+header {
+  margin-right: auto;
+  margin-left: auto;
+}
+header h1 {
+  width: 100%;
+  display: block;
+}
+
+p {
+  line-height: 1.6em;
+  margin-bottom: 1.25em;
+}
+
+ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+li, blockquote {
+  margin-left: 0.5em;
+  line-height: 1.6em;
+  margin-bottom: 0.5em;
+}
+
+blockquote {
+  border-left: 1px solid #dedddb;
+  padding-left: 0.5em;
+  font-style: italic;
+}
+
+#action {
+  border-top: 1px solid #dedddb;
+  border-bottom: 1px solid #dedddb;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  margin-bottom: 1.25em;
+}
+
+#action p {
+  margin-bottom: 0;
+}
+
+form {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+/*
+	Mobile layout 
+	240–479 px
+	Zoomed out below 320 pxasf
+*/
+@media screen and (min-width: 15em) {
+  p, ul, blockquote, .txtFld, .button {
+    font-size: 0.813em;
+  }
+
+  h1 {
+    font-size: 1.625em;
+    margin-bottom: 0.25em;
+    margin-top: 0.5em;
+  }
+
+  h2 {
+    font-size: 1.188em;
+    margin-bottom: 0.375em;
+  }
+
+  header {
+    width: 16.5em;
+  }
+
+  #container {
+    margin: 0 auto;
+    width: 16.5em;
+  }
+
+  #box-1 {
+    width: 16.5em;
+  }
+
+  #box-2 {
+    width: 16.5em;
+  }
+
+  .txtFld {
+    width: 12em;
+  }
+}
+/*
+	Wide mobile layout 
+	480-767 px
+	Zoomed in above 480 px
+*/
+@media screen and (min-width: 30em) {
+  p, ul, blockquote, .txtFld, .button {
+    font-size: 0.875em;
+  }
+
+  h1 {
+    font-size: 2.25em;
+  }
+
+  h2 {
+    font-size: 1.625em;
+  }
+
+  header {
+    width: 25.5em;
+  }
+
+  #container {
+    width: 25.5em;
+  }
+
+  #box-1 {
+    width: 25.5em;
+  }
+
+  #box-2 {
+    width: 25.5em;
+  }
+
+  .txtFld {
+    width: 21em;
+  }
+}
+/*
+	Tablet layout 
+	600-911 px
+	Zoomed in above 600 px
+*/
+@media screen and (min-width: 37.5em) {
+  p, ul, blockquote, .txtFld, .button {
+    font-size: 0.875em;
+  }
+
+  h1 {
+    font-size: 2.875em;
+  }
+
+  h2 {
+    font-size: 2.063em;
+  }
+
+  header {
+    width: 34.5em;
+  }
+
+  #container {
+    width: 34.5em;
+  }
+
+  #box-1 {
+    width: 16.5em;
+    float: left;
+    margin-right: 24px;
+    position: relative;
+  }
+
+  #box-2 {
+    width: 16.5em;
+    float: left;
+    margin-top: 245px;
+  }
+
+  #action {
+    width: 16.5em;
+    position: absolute;
+    left: 18em;
+    top: 0;
+  }
+
+  .txtFld {
+    width: 9em;
+  }
+}
+/*
+	Widescreen layout 
+	912-1887 px
+	Zoomed in above 912 px
+*/
+@media screen and (min-width: 57em) {
+  p, ul, blockquote, .txtFld, .button {
+    font-size: 1em;
+  }
+
+  h1 {
+    font-size: 4.125em;
+  }
+
+  h2 {
+    font-size: 3.313em;
+  }
+
+  header {
+    width: 52.5em;
+  }
+
+  #container {
+    width: 52.5em;
+  }
+
+  #box-1 {
+    width: 25.5em;
+    float: left;
+    margin-right: 24px;
+  }
+
+  #box-2 {
+    width: 25.5em;
+    float: left;
+    margin-top: 223px;
+  }
+
+  #action {
+    width: 25.5em;
+    position: absolute;
+    left: 27em;
+    top: 0;
+  }
+
+  .txtFld {
+    width: 16.5em;
+  }
+}

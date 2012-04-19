@@ -1,0 +1,145 @@
+//Imports
+@import "modules/_grid";
+@import "modules/_normalize";
+@import "modules/_chrome.scss";
+//variables
+$green: #5b9c3e;
+$blue: #80a8cf;
+$brown: #583610;
+//grid
+
+header{
+	margin-right: auto;
+	margin-left: auto;
+	h1{
+	width: 100%;
+	display: block;
+}
+}
+p{
+	line-height: 1.6em;
+	margin-bottom: 20px / $em;
+}
+ul{list-style-type: disc; list-style-position: inside;}
+li, blockquote{margin-left: 8px /$em;line-height: 1.6em;margin-bottom: 8px / $em;}
+blockquote{border-left: 1px solid #dedddb;padding-left: 8px / $em;font-style: italic;}
+#action{border-top: 1px solid #dedddb;border-bottom : 1px solid #dedddb;padding-top: 8px /$em;padding-bottom: 8px /$em;margin-bottom: 20px /$em;}
+#action p{margin-bottom: 0;}
+form{margin-top: 8px / $em; margin-bottom: 8px / $em;text-align: center;}
+
+/*
+	Mobile layout 
+	240–479 px
+	Zoomed out below 320 pxasf
+*/
+//typography
+@media screen and (min-width: 15em) {
+p, ul, blockquote, .txtFld, .button {font-size: ($font-size - 3) / $em;}
+h1{font-size: ($font-size + 10) / $em;margin-bottom: 4px / $em;margin-top: 8px / $em;}
+h2{font-size: ($font-size + 3) / $em;margin-bottom: 6px / $em;}
+//Grid
+header{
+	@include width(4);
+}
+#container{
+	margin: 0 auto;
+	@include width(4)
+}
+
+#box-1{
+	@include width(4);
+}
+#box-2{ @include width(4);}
+.txtFld{@include width(3);}
+}
+ 
+/*
+	Wide mobile layout 
+	480-767 px
+	Zoomed in above 480 px
+*/
+
+@media screen and (min-width: 30em) {
+//Typography
+p, ul, blockquote, .txtFld, .button {font-size: ($font-size - 2) / $em;}
+h1{font-size: ($font-size + 20) / $em;}
+h2{font-size: ($font-size + 10) / $em;}
+//Grid
+header{
+	@include width(6);
+}
+#container{
+	@include width(6);
+}
+#box-1{
+	@include width(6);
+}
+#box-2{ 
+	@include width(6);
+}
+.txtFld{@include width(5);}
+}
+
+/*
+	Tablet layout 
+	600-911 px
+	Zoomed in above 600 px
+*/
+@media screen and (min-width: 37.5em) {
+//Typography
+p, ul, blockquote, .txtFld, .button {font-size: ($font-size - 2) / $em;}
+h1{font-size: ($font-size + 30) / $em;}
+h2{font-size: ($font-size + 17) / $em;}
+//Grid
+header{
+	@include width(8);
+}
+#container{
+	@include width(8);
+}
+#box-1{
+	@include width(4);
+	float: left;
+	margin-right: $gutter;
+	position: relative;
+}
+#box-2{
+	@include width(4);
+	float: left;
+	margin-top: 245px;
+
+}
+#action{@include width(4);position: absolute;left: $cols4 + $gutter /$em;top: 0;}
+.txtFld{width: $cols2 + $gutter / $em;}
+}
+
+/*
+	Widescreen layout 
+	912-1887 px
+	Zoomed in above 912 px
+*/
+@media screen and (min-width: 57em) {
+//Typography
+p, ul, blockquote, .txtFld, .button {font-size: ($font-size) / $em;}
+h1{font-size: ($font-size + 50) / $em;}
+h2{font-size: ($font-size + 37) / $em;}
+//Grid
+header{
+	@include width(12);
+}
+#container{
+	@include width(12);
+}
+#box-1{
+	@include width(6);
+	float: left;
+	margin-right: $gutter;
+}
+#box-2{
+	@include width(6);
+	float: left;
+	margin-top: 223px;
+}
+#action{@include width(6);position: absolute;left: $cols6 + $gutter /$em;top: 0;}
+.txtFld{@include width(4);}
+}
