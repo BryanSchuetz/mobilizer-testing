@@ -2,6 +2,7 @@
 
 require 'rubygems'
 require 'bundler'
+require 'sunlight'
 begin
   Bundler.setup(:default, :development)
 rescue Bundler::BundlerError => e

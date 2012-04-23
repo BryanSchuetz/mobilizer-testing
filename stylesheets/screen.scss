@@ -14,19 +14,27 @@ header{
 	h1{
 	width: 100%;
 	display: block;
+	font-family: 'Vollkorn', sans-serif;
 }
+	h2{font-family: 'Vollkorn', sans-serif; color: #0179A5;}
 }
+a, a:visited{color: #0179A5; text-decoration: none;}
+a:hover{color: #80a8cf;}
+body{background-color: #f6f6f7; font-family: 'Gentium Book Basic', serif;}
 p{
 	line-height: 1.6em;
 	margin-bottom: 20px / $em;
 }
-ul{list-style-type: disc; list-style-position: inside;}
+ul{list-style-type: none; list-style-position: inside;}
+#talkingPoints{list-style-type: disc;}
 li, blockquote{margin-left: 8px /$em;line-height: 1.6em;margin-bottom: 8px / $em;}
+.members img{float: left; margin-right: 8px /$em; width: 50px; height: 60px;}
+.members{margin-bottom: 16px /$em;}
 blockquote{border-left: 1px solid #dedddb;padding-left: 8px / $em;font-style: italic;}
 #action{border-top: 1px solid #dedddb;border-bottom : 1px solid #dedddb;padding-top: 8px /$em;padding-bottom: 8px /$em;margin-bottom: 20px /$em;}
 #action p{margin-bottom: 0;}
 form{margin-top: 8px / $em; margin-bottom: 8px / $em;text-align: center;}
-
+#errorZip{color: red;}
 /*
 	Mobile layout 
 	240–479 px
@@ -36,7 +44,7 @@ form{margin-top: 8px / $em; margin-bottom: 8px / $em;text-align: center;}
 @media screen and (min-width: 15em) {
 p, ul, blockquote, .txtFld, .button {font-size: ($font-size - 3) / $em;}
 h1{font-size: ($font-size + 10) / $em;margin-bottom: 4px / $em;margin-top: 8px / $em;}
-h2{font-size: ($font-size + 3) / $em;margin-bottom: 6px / $em;}
+h2{font-size: ($font-size + 1) / $em;margin-bottom: 7px / $em;}
 //Grid
 header{
 	@include width(4);
@@ -78,6 +86,7 @@ header{
 	@include width(6);
 }
 .txtFld{@include width(5);}
+.members img{float: left; margin-right: 8px /$em; width: 55px; height: 65px;}
 }
 
 /*
@@ -108,6 +117,9 @@ header{
 	float: left;
 	margin-top: 245px;
 
+}
+.talkingPoints{
+	margin-top: 0px !important;
 }
 #action{@include width(4);position: absolute;left: $cols4 + $gutter /$em;top: 0;}
 .txtFld{width: $cols2 + $gutter / $em;}
@@ -140,6 +152,10 @@ header{
 	float: left;
 	margin-top: 223px;
 }
+.talkingPoints{
+	margin-top: 0px !important;
+}
 #action{@include width(6);position: absolute;left: $cols6 + $gutter /$em;top: 0;}
 .txtFld{@include width(4);}
+.members img{float: left; margin-right: 8px /$em; width: 65px; height: 75px;}
 }

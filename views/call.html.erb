@@ -1,0 +1,32 @@
+<% @title = "Stop the CISPA: Call Your Representetive" %>
+<header>
+    <h1 id="title"><a href="/">Help Stop The CISPA</a></h1>
+  </header>
+  <div id="container">
+  <div id="box-1" class="column">
+    <p><strong>Use the info below to contact your representative now:</strong></p>
+   <ul>
+      <% @zip = params[:zip] %>
+      <% Sunlight::Base.api_key = '055be7d23ef44b2c87945bf24ec1e536' 
+       @members_of_congress = Sunlight::Legislator.all_in_zipcode(@zip) 
+         @members_of_congress.each do |member| %>
+             <li class="clearfix members"><img src="images/members_medium/<%= member.bioguide_id %>.jpg" alt="Members Portrait"><%= member.title %>. <strong><%= member.firstname %> <%= member.lastname %></strong> <br/>Call Now: <%= member.phone %>
+              <%= if member.twitter_id != ""
+                  "<br/>Or Tweet: <a target=\"blank\"href=\"https://twitter.com/intent/tweet?source=webclient&text=.%40#{member.twitter_id}+Does+the+CIA+really+need+to+know+what+I+do+online%3F+%23CongressTMI+Stop+%23CISPA+https%3A%2F%2Feff.org%2Fr.1X2\">@#{member.twitter_id}</a></li>"
+                  else
+                    "</li>"
+                  end
+               %>
+        <% end %>
+    </ul> 
+  </div>
+  <div id="box-2" class="column talkingPoints">
+    <p><strong>Here’s some talking points you can use in your communication:</strong></p>
+    <p><ul id="talkingPoints">
+      <li>"The bill would carve out huge exemptions to bedrock privacy law and allow companies to share private user data with the government without any judicial oversight."</li>
+      <li>"Any existing legal protections of user privacy will be usurped by CISPA." "The bill clearly states that the information may be shared 'notwithstanding any other provision of law.'"</li>
+      <li>"This bill will have wide reaching impact to the fundamental principles up which the Internet is founded."</li>
+      <li><strong>"I urge you to oppose this bill."</strong></li>
+    </ul></p>
+  </div> 
+  </div>

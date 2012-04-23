@@ -18,11 +18,5 @@ module ViewHelpers
   def hidden(&block)
     #no-op
   end
-  
   # Add your own helpers below...
-   def proof()
-    "this is a string"
-  end
-
-  
 end
