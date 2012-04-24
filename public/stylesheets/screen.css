@@ -231,10 +231,12 @@ header h1 {
   width: 100%;
   display: block;
   font-family: 'Vollkorn', sans-serif;
+  line-height: 1.6em;
 }
 header h2 {
   font-family: 'Vollkorn', sans-serif;
   color: #0179A5;
+  line-height: 1.6em;
 }
 
 a, a:visited {
@@ -322,7 +324,6 @@ form {
 
   h1 {
     font-size: 1.625em;
-    margin-bottom: 0.25em;
     margin-top: 0.5em;
   }
 

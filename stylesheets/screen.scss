@@ -15,8 +15,9 @@ header{
 	width: 100%;
 	display: block;
 	font-family: 'Vollkorn', sans-serif;
+	line-height: 1.6em;
 }
-	h2{font-family: 'Vollkorn', sans-serif; color: #0179A5;}
+	h2{font-family: 'Vollkorn', sans-serif; color: #0179A5; line-height: 1.6em;}
 }
 a, a:visited{color: #0179A5; text-decoration: none;}
 a:hover{color: #80a8cf;}
@@ -43,7 +44,7 @@ form{margin-top: 8px / $em; margin-bottom: 8px / $em;text-align: center;}
 //typography
 @media screen and (min-width: 15em) {
 p, ul, blockquote, .txtFld, .button {font-size: ($font-size - 3) / $em;}
-h1{font-size: ($font-size + 10) / $em;margin-bottom: 4px / $em;margin-top: 8px / $em;}
+h1{font-size: ($font-size + 10) / $em;margin-top: 8px / $em;}
 h2{font-size: ($font-size + 1) / $em;margin-bottom: 7px / $em;}
 //Grid
 header{
