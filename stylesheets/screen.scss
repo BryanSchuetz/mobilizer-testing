@@ -32,11 +32,18 @@ ul{list-style-type: none; list-style-position: inside;}
 li, blockquote{margin-left: 8px /$em;line-height: 1.6em;margin-bottom: 8px / $em;}
 .members img{float: left; margin-right: 8px /$em; width: 50px; height: 60px;}
 .members{margin-bottom: 16px /$em;}
-blockquote{border-left: 1px solid #dedddb;padding-left: 8px / $em;font-style: italic;}
+blockquote{border-left: 1px solid #dedddb;padding-left: 8px / $em;font-style: italic;margin-bottom: 20px / $em;}
 #action{border-top: 1px solid #dedddb;border-bottom : 1px solid #dedddb;padding-top: 8px /$em;padding-bottom: 8px /$em;margin-bottom: 20px /$em;}
 #action p{margin-bottom: 0;}
 form{margin-top: 8px / $em; margin-bottom: 8px / $em;text-align: center;}
 #errorZip{color: red;}
+img.graphic{width: 100%;border: 1px solid #dedddb;
+  -webkit-box-shadow: 0px 4px 3px 0px #a8a8a8;
+     -moz-box-shadow: 0px 4px 3px 0px #a8a8a8;
+          box-shadow: 0px 4px 3px 0px #a8a8a8;
+}
+span.graphic{display: block;font-size: 8px / $em; margin-bottom: 16px / $em; margin-top: 1px / $em;}
+
 /*
 	Mobile layout 
 	240–479 px
@@ -89,6 +96,7 @@ header{
 }
 .txtFld{@include width(5);}
 .members img{float: left; margin-right: 8px /$em; width: 55px; height: 65px;}
+span.graphic{display: block;font-size: 10px / $em; margin-bottom: 16px / $em; margin-top: 1px / $em;}
 }
 
 /*
@@ -117,7 +125,7 @@ header{
 #box-2{
 	@include width(4);
 	float: left;
-	margin-top: 245px;
+	margin-top: 256px;
 
 }
 .talkingPoints{
@@ -125,6 +133,7 @@ header{
 }
 #action{@include width(4);position: absolute;left: $cols4 + $gutter /$em;top: 0;}
 .txtFld{width: $cols2 + $gutter / $em;}
+span.graphic{display: block;font-size: 8px / $em; margin-bottom: 16px / $em; margin-top: 1px / $em;}
 }
 
 /*
@@ -152,7 +161,7 @@ header{
 #box-2{
 	@include width(6);
 	float: left;
-	margin-top: 223px;
+	margin-top: 233px;
 }
 .talkingPoints{
 	margin-top: 0px !important;
@@ -160,4 +169,5 @@ header{
 #action{@include width(6);position: absolute;left: $cols6 + $gutter /$em;top: 0;}
 .txtFld{@include width(4);}
 .members img{float: left; margin-right: 8px /$em; width: 65px; height: 75px;}
+span.graphic{display: block;font-size: 12px / $em; margin-bottom: 16px / $em; margin-top: 3px / $em;}
 }

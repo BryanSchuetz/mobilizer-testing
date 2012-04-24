@@ -292,6 +292,7 @@ blockquote {
   border-left: 1px solid #dedddb;
   padding-left: 0.5em;
   font-style: italic;
+  margin-bottom: 1.25em;
 }
 
 #action {
@@ -314,6 +315,21 @@ form {
 
 #errorZip {
   color: red;
+}
+
+img.graphic {
+  width: 100%;
+  border: 1px solid #dedddb;
+  -webkit-box-shadow: 0px 4px 3px 0px #a8a8a8;
+  -moz-box-shadow: 0px 4px 3px 0px #a8a8a8;
+  box-shadow: 0px 4px 3px 0px #a8a8a8;
+}
+
+span.graphic {
+  display: block;
+  font-size: 0.5em;
+  margin-bottom: 1em;
+  margin-top: 0.063em;
 }
 
 /*
@@ -401,6 +417,13 @@ form {
     width: 55px;
     height: 65px;
   }
+
+  span.graphic {
+    display: block;
+    font-size: 0.625em;
+    margin-bottom: 1em;
+    margin-top: 0.063em;
+  }
 }
 /*
 	Tablet layout 
@@ -438,7 +461,7 @@ form {
   #box-2 {
     width: 16.5em;
     float: left;
-    margin-top: 245px;
+    margin-top: 256px;
   }
 
   .talkingPoints {
@@ -454,6 +477,13 @@ form {
 
   .txtFld {
     width: 9em;
+  }
+
+  span.graphic {
+    display: block;
+    font-size: 0.5em;
+    margin-bottom: 1em;
+    margin-top: 0.063em;
   }
 }
 /*
@@ -491,7 +521,7 @@ form {
   #box-2 {
     width: 25.5em;
     float: left;
-    margin-top: 223px;
+    margin-top: 233px;
   }
 
   .talkingPoints {
@@ -514,5 +544,12 @@ form {
     margin-right: 0.5em;
     width: 65px;
     height: 75px;
+  }
+
+  span.graphic {
+    display: block;
+    font-size: 0.75em;
+    margin-bottom: 1em;
+    margin-top: 0.188em;
   }
 }
