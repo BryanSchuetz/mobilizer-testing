@@ -1,7 +1,6 @@
 function validateZIP(field) {
 
 var marg = $("#box-2").css("margin-top");
-console.log(marg);
 if (marg == "245px"){
 	$("#box-2").css("margin-top", "276px");
 }
