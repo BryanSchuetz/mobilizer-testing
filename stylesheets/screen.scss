@@ -17,7 +17,7 @@ header{
 	display: block;
 	font-family: 'Vollkorn', sans-serif;
 	line-height: 1.6em;
-	text-shadow: 0px 1px 2px #333332;
+	text-shadow: 0px 1px 1px #333332;
 }
 	h2{font-family: 'Vollkorn', sans-serif; color: #0179A5; line-height: 1.6em;}
 }
@@ -91,7 +91,6 @@ h2{font-size: ($font-size + 10) / $em;}
 header{
 	@include width(6);
 }
-h2{text-shadow: 0px 1px 2px #333332;}
 #container{
 	@include width(6);
 }

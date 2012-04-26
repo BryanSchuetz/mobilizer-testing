@@ -233,7 +233,7 @@ header h1 {
   display: block;
   font-family: 'Vollkorn', sans-serif;
   line-height: 1.6em;
-  text-shadow: 0px 1px 2px #333332;
+  text-shadow: 0px 1px 1px #333332;
 }
 header h2 {
   font-family: 'Vollkorn', sans-serif;
@@ -401,10 +401,6 @@ span.graphic {
 
   header {
     width: 25.5em;
-  }
-
-  h2 {
-    text-shadow: 0px 1px 2px #333332;
   }
 
   #container {
