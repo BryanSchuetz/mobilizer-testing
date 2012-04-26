@@ -8,20 +8,26 @@ $blue: #80a8cf;
 $brown: #583610;
 //grid
 
-header{
+header{ 
 	margin-right: auto;
 	margin-left: auto;
 	h1{
+	position:	relative;
 	width: 100%;
 	display: block;
 	font-family: 'Vollkorn', sans-serif;
 	line-height: 1.6em;
+	text-shadow: 0px 1px 2px #333332;
 }
 	h2{font-family: 'Vollkorn', sans-serif; color: #0179A5; line-height: 1.6em;}
 }
 .callTitle{margin-bottom: 7px / $em;}
-a, a:visited{color: #0179A5; text-decoration: none;}
-a:hover{color: #80a8cf;}
+a, a:visited{color: #0179A5; text-decoration: none;-moz-transition: color 0.4s ease-out;
+-o-transition: color 0.4s ease-out;
+-webkit-transition: color 0.4s ease-out;}
+a:hover{color: #80a8cf;-moz-transition: color 0.4s ease-out;
+-o-transition: color 0.4s ease-out;
+-webkit-transition: color 0.4s ease-out;}
 body{background-color: #f6f6f7; font-family: 'Gentium Book Basic', serif;}
 p{
 	line-height: 1.6em;
@@ -66,7 +72,7 @@ header{
 #box-1{
 	@include width(4);
 }
-#box-2{ @include width(4);}
+#box-2{@include width(4);}
 .txtFld{@include width(3);}
 }
  
@@ -85,6 +91,7 @@ h2{font-size: ($font-size + 10) / $em;}
 header{
 	@include width(6);
 }
+h2{text-shadow: 0px 1px 2px #333332;}
 #container{
 	@include width(6);
 }

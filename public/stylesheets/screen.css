@@ -228,10 +228,12 @@ header {
   margin-left: auto;
 }
 header h1 {
+  position: relative;
   width: 100%;
   display: block;
   font-family: 'Vollkorn', sans-serif;
   line-height: 1.6em;
+  text-shadow: 0px 1px 2px #333332;
 }
 header h2 {
   font-family: 'Vollkorn', sans-serif;
@@ -246,10 +248,16 @@ header h2 {
 a, a:visited {
   color: #0179A5;
   text-decoration: none;
+  -moz-transition: color 0.4s ease-out;
+  -o-transition: color 0.4s ease-out;
+  -webkit-transition: color 0.4s ease-out;
 }
 
 a:hover {
   color: #80a8cf;
+  -moz-transition: color 0.4s ease-out;
+  -o-transition: color 0.4s ease-out;
+  -webkit-transition: color 0.4s ease-out;
 }
 
 body {
@@ -393,6 +401,10 @@ span.graphic {
 
   header {
     width: 25.5em;
+  }
+
+  h2 {
+    text-shadow: 0px 1px 2px #333332;
   }
 
   #container {
