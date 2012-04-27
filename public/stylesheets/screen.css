@@ -274,6 +274,10 @@ ul {
   list-style-position: inside;
 }
 
+ul#charges {
+  list-style-type: disc;
+}
+
 #talkingPoints {
   list-style-type: disc;
 }
