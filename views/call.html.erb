@@ -7,7 +7,7 @@
     <p><strong>Use the info below to contact your representative now:</strong></p>
    <ul>
       <% @zip = params[:zip] %>
-      <% Sunlight::Base.api_key = '055be7d23ef44b2c87945bf24ec1e536' 
+      <% Sunlight::Base.api_key = '' 
        @members_of_congress = Sunlight::Legislator.all_in_zipcode(@zip) %>
         <%= if @members_of_congress.empty?
                 "<li><span id=\"errorZip\">*That does not seem to be a valid ZIP Code, please go back and try again.*</span></li>"
