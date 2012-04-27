@@ -20,4 +20,5 @@ http://mobilize.signalbase.org
 * Move content blocks into markdown partials for easier customization
 * Clean up the SASS and make basic styling: color scheme, fonts, etc. easier to customize.
 * Improve ZIP Code validation (database?)
+* Make the whole customization and deployment part web based so it's even easier.
 
