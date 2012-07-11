@@ -3,8 +3,7 @@
 A mobile optimized web app for soliciting public outreach to Capitol Hill. Intended for those wanting to direct public reaction to congress around a particular piece of legislation currently under debate. Just swap in your own content blocks (the legislation, the argument, the talking points, the background) and deploy.
 
 - - - - 
-####Demo
-http://mobilize.signalbase.org
+
 
 - - - - 
 * Uses the [Sunlight Congress API](http://services.sunlightlabs.com/docs/Sunlight_Congress_API/) to pull representatives associated with a 5 digit Zip Code.
