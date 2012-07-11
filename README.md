@@ -4,8 +4,6 @@ A mobile optimized web app for soliciting public outreach to Capitol Hill. Inten
 
 - - - - 
 
-
-- - - - 
 * Uses the [Sunlight Congress API](http://services.sunlightlabs.com/docs/Sunlight_Congress_API/) to pull representatives associated with a 5 digit Zip Code.
 	* First Name, Last Name, Title, Phone, Twitter ID, Picture: All maintained by the Sunlight Foundation
 * Built as a Rack App so it's super easy to deploy to any Ruby friendly host.
