@@ -13,8 +13,10 @@ A mobile optimized web app for soliciting public outreach to Capitol Hill. Inten
 
 ####Screenshots
 
+Making the argument:
 ![ScreenShot](https://raw.github.com/BryanSchuetz/mobilizer-testing/master/screenshot_argument.jpg)
 
+Making the call:
 ![ScreenShot](https://raw.github.com/BryanSchuetz/mobilizer-testing/master/screenshot_action.jpg)
 
 - - - - 
